@@ -41,9 +41,9 @@ ciclo_infinito:
 tiempo_espera:				; confiro el tiempo de espera
 
 	ldi R20, 32
-t3: ldi R19, 250
-t2: ldi R18, 250
-t1: nop						; hasta aca son 4 ciclos de maquina por iteracion -> 250ns
+t3: 	ldi R19, 250
+t2: 	ldi R18, 250
+t1: 	nop						; hasta aca son 4 ciclos de maquina por iteracion -> 250ns
 
 	dec R18					; 250 x 250ns = 62.5us
 	brne t1
