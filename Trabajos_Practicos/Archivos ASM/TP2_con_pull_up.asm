@@ -20,7 +20,7 @@ MAIN:
 	CLR R20
 	LDI R20, 0b11111101 ;pin 0 como salida y pin 1 como entrada y el resto como salidas
 	OUT DDRB, R20
-	SBI PORTB,1
+	SBI PORTB,1	;Activo la resistencia de Pull_Up
 
 CICLO_INFINITO:
 	
