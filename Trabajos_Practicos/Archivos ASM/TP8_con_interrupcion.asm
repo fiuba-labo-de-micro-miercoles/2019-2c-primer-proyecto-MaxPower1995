@@ -91,4 +91,4 @@ PUNTEROS:	;INICIALIZA LOS PUNTEROS EN ROM
 	LDI ZH,HIGH(TABLA_ROM<<1)
 	RET
 
-TABLA_ROM: .db 'H','O','L','A',' ','L','A','B','O',' ','D','E',' ','M','I','C','O','S',' ','P','U','L','S','E',' ','1',' ','2',' ','3',' ','O',' ','4',' ','P','A','R','A',' ','C','O','N','T','R','O','L','A','R',' ','L','O','S',' ','L','E','D','S',0
+TABLA_ROM: .db "*** Hola Labo de Micro ***", 10, 13,"Escriba 1, 2, 3 o 4 para controlar los LEDs", 10, 13, 0
