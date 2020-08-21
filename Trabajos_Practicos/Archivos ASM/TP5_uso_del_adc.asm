@@ -25,10 +25,12 @@ MAIN:
     STS ADCSRA,R22
     LDI R22,    0x62	; ADMUX-> Vreferencia=Vcc, Corrimiento a izquierda, ADC2
     STS ADMUX,R22
+	LDI R22, 0x00
+    STS ADCSRB,R22		;free running
 
-    SEI						;activo las interrupciones
+    SEI					;activo las interrupciones
 
-    LDS R22, ADCSRA			; escribo un 1 en adsc y arranca la conversion
+    LDS R22, ADCSRA		; escribo un 1 en adsc y arranca la conversion
     ORI R22, 0x40
     STS ADCSRA, R22
     
